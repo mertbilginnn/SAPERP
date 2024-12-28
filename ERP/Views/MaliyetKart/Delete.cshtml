@@ -1,0 +1,87 @@
+﻿@model ERP.Models.Veri.Maliyet.BSMGRNNMCCMHEAD
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BSMGRNNMCCMHEAD</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CCMDOCFROM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CCMDOCFROM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CCMDOCUNTIL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CCMDOCUNTIL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MAINCCMDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MAINCCMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MAINCCMDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MAINCCMDOCTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISDELETED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISDELETED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISPASSIVE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISPASSIVE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CCMSTEXT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CCMSTEXT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CCMLTEXT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CCMLTEXT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FCOMCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FCOMCODE.COMCODE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FLANCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FLANCODE.LANCODE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOCTYPE.DOCTYPE)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CCMDOCNUM" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

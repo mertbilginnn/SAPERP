@@ -1,0 +1,57 @@
+﻿@model ERP.Models.Kontrol.Genel.BSMGRNNMGEN002
+
+@{
+    ViewData["Title"] = "Dili Sil";
+}
+
+<h1 class="text-danger text-center mb-4">Dili Sil</h1>
+
+<p class="text-center">Bu dili silmek istediğinizden emin misiniz?</p>
+
+<div class="card shadow-lg">
+    <div class="card-header bg-danger text-white">
+        <h4 class="mb-0">Dil Bilgileri</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th class="bg-light">Dil Kodu</th>
+                <td>@Html.DisplayFor(model => model.LANCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Dil İsmi</th>
+                <td>@Html.DisplayFor(model => model.LANTEXT)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Firma Kodu</th>
+                <td>@Html.DisplayFor(model => model.FCOMCODE.COMCODE)</td>
+            </tr>
+        </table>
+        <div class="mt-4 text-center">
+            <form method="post" asp-action="DeleteConfirmed" asp-route-id="@Model.LANCODE">
+                <button type="submit" class="btn btn-danger btn-lg shadow-sm">
+                    <i class="fas fa-trash-alt"></i> Sil
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm ms-3">
+                    <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    table.table-bordered th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table.table-bordered td {
+        font-weight: 500;
+    }
+
+    button:hover, a:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

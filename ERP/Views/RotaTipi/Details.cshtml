@@ -1,0 +1,57 @@
+﻿@model ERP.Models.Kontrol.RotaBilgi.BSMGRNNMROT001
+
+@{
+    ViewData["Title"] = "Rota Detayları";
+}
+
+<h1 class="text-primary text-center mb-4">Rota Detayları</h1>
+
+<div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Rota Bilgileri</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th class="bg-light">Rota Tipi</th>
+                <td>@Html.DisplayFor(model => model.DOCTYPE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Rota Tipi Açıklaması</th>
+                <td>@Html.DisplayFor(model => model.DOCTYPETEXT)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Pasif mi?</th>
+                <td>@Html.DisplayFor(model => model.ISPASSIVE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Firma Kodu</th>
+                <td>@Html.DisplayFor(model => model.FCOMCODE.COMCODE)</td>
+            </tr>
+        </table>
+        <div class="mt-4 text-center">
+            <a asp-action="Edit" asp-route-id="@Model?.DOCTYPE" class="btn btn-primary btn-lg shadow-sm">
+                <i class="fas fa-edit"></i> Düzenle
+            </a>
+            <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    table.table-bordered th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table.table-bordered td {
+        font-weight: 500;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

@@ -1,0 +1,104 @@
+﻿@model ERP.Models.Veri.IsMerkez.BSMGRNNMWCMHEAD
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BSMGRNNMWCMHEAD</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COMCODE" class="control-label"></label>
+                <select asp-for="COMCODE" class="form-control" asp-items="ViewBag.COMCODE"></select>
+                <span asp-validation-for="COMCODE" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="WCMDOCNUM" />
+            <div class="form-group">
+                <label asp-for="WCMDOCTYPE" class="control-label"></label>
+                <select asp-for="WCMDOCTYPE" class="form-control" asp-items="ViewBag.WCMDOCTYPE"></select>
+                <span asp-validation-for="WCMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WCMDOCFROM" class="control-label"></label>
+                <input asp-for="WCMDOCFROM" class="form-control" />
+                <span asp-validation-for="WCMDOCFROM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WCMDOCUNTIL" class="control-label"></label>
+                <input asp-for="WCMDOCUNTIL" class="form-control" />
+                <span asp-validation-for="WCMDOCUNTIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MAINWCMDOCTYPE" class="control-label"></label>
+                <input asp-for="MAINWCMDOCTYPE" class="form-control" />
+                <span asp-validation-for="MAINWCMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MAINWCMDOCNUM" class="control-label"></label>
+                <input asp-for="MAINWCMDOCNUM" class="form-control" />
+                <span asp-validation-for="MAINWCMDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMDOCNUM" class="control-label"></label>
+                <select asp-for="CCMDOCNUM" class="form-control" asp-items="ViewBag.CCMDOCNUM"></select>
+                <span asp-validation-for="CCMDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMDOCTYPE" class="control-label"></label>
+                <select asp-for="CCMDOCTYPE" class="form-control" asp-items="ViewBag.CCMDOCTYPE"></select>
+                <span asp-validation-for="CCMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WORKTIME" class="control-label"></label>
+                <input asp-for="WORKTIME" class="form-control" />
+                <span asp-validation-for="WORKTIME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISDELETED" class="control-label"></label>
+                <input asp-for="ISDELETED" class="form-control" />
+                <span asp-validation-for="ISDELETED" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISPASSIVE" class="control-label"></label>
+                <input asp-for="ISPASSIVE" class="form-control" />
+                <span asp-validation-for="ISPASSIVE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WCMSTEXT" class="control-label"></label>
+                <input asp-for="WCMSTEXT" class="form-control" />
+                <span asp-validation-for="WCMSTEXT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WCMLTWXT" class="control-label"></label>
+                <input asp-for="WCMLTWXT" class="form-control" />
+                <span asp-validation-for="WCMLTWXT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LANCODE" class="control-label"></label>
+                <select asp-for="LANCODE" class="form-control" asp-items="ViewBag.LANCODE"></select>
+                <span asp-validation-for="LANCODE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OPRDOCTYPE" class="control-label"></label>
+                <input asp-for="OPRDOCTYPE" class="form-control" />
+                <span asp-validation-for="OPRDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

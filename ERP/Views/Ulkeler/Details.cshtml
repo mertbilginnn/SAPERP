@@ -1,0 +1,49 @@
+﻿@model ERP.Models.Kontrol.Genel.BSMGRNNMGEN003
+
+@{
+    ViewData["Title"] = "Ülke Detay";
+}
+
+<h1 class="text-primary text-center mb-4">Ülke Detay</h1>
+
+<div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Ülke Bilgileri</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th class="bg-light">Ülke Kodu</th>
+                <td>@Html.DisplayFor(model => model.COUNTRYCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Ülke İsmi</th>
+                <td>@Html.DisplayFor(model => model.COUNTRYNAME)</td>
+            </tr>
+        </table>
+        <div class="mt-4 text-center">
+            <a asp-action="Edit" asp-route-id="@Model?.COUNTRYCODE" class="btn btn-primary btn-lg shadow-sm">
+                <i class="fas fa-edit"></i> Düzenle
+            </a>
+            <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    table.table-bordered th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table.table-bordered td {
+        font-weight: 500;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

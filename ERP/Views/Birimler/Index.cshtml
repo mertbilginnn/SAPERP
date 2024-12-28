@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ERP.Models.Kontrol.Genel.BSMGRNNMGEN005>
+
+@{
+    ViewData["Title"] = "Birimler";
+}
+
+<h1 class="text-primary text-center mt-4">Birimler</h1>
+
+<div class="d-flex justify-content-end mb-3">
+    <a class="btn btn-success btn-lg shadow-sm" asp-action="Create">
+        <i class="fas fa-plus-circle"></i> Yeni Birim Oluştur
+    </a>
+</div>
+
+<table class="table table-hover table-bordered table-striped shadow-lg rounded">
+    <thead class="bg-gradient bg-dark text-white">
+        <tr>
+            <th>Birim Kodu</th>
+            <th>Birim Adı</th>
+            <th>Ana Ağırlık Birimi</th>
+            <th>Ana Birim Kodu</th>
+            <th>Firma Kodu</th>
+            <th class="text-center">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>@Html.DisplayFor(modelItem => item.UNITCODE)</td>
+                <td>@Html.DisplayFor(modelItem => item.UNITTEXT)</td>
+                <td>@Html.DisplayFor(modelItem => item.ISMAINUNIT)</td>
+                <td>@Html.DisplayFor(modelItem => item.MAINUNITCODE)</td>
+                <td>@Html.DisplayFor(modelItem => item.FCOMCODE.COMCODE)</td>
+                <td class="text-center">
+                    <a class="btn btn-primary btn-sm mx-1 shadow-sm" asp-action="Edit" asp-route-id="@item.UNITCODE">
+                        <i class="fas fa-edit"></i> Düzenle
+                    </a>
+                    <a class="btn btn-warning btn-sm mx-1 shadow-sm" asp-action="Details" asp-route-id="@item.UNITCODE">
+                        <i class="fas fa-info-circle"></i> Detay
+                    </a>
+                    <a class="btn btn-danger btn-sm mx-1 shadow-sm" asp-action="Delete" asp-route-id="@item.UNITCODE">
+                        <i class="fas fa-trash-alt"></i> Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    body {
+        background: linear-gradient(to right, #ece9e6, #ffffff);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    table tbody tr:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    a.btn {
+        transition: all 0.2s ease-in-out;
+    }
+
+        a.btn:hover {
+            transform: scale(1.05);
+        }
+</style>

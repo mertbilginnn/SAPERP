@@ -1,0 +1,53 @@
+﻿@model ERP.Models.Kontrol.Genel.BSMGRNNMGEN002
+
+@{
+    ViewData["Title"] = "Dil Detaylar";
+}
+
+<h1 class="text-primary text-center mb-4">Dil Detayları</h1>
+
+<div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Dil Bilgileri</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th class="bg-light">Dil Kodu</th>
+                <td>@Html.DisplayFor(model => model.LANCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Dil İsmi</th>
+                <td>@Html.DisplayFor(model => model.LANTEXT)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Firma Kodu</th>
+                <td>@Html.DisplayFor(model => model.FCOMCODE.COMCODE)</td>
+            </tr>
+        </table>
+        <div class="mt-4 text-center">
+            <a asp-action="Edit" asp-route-id="@Model?.LANCODE" class="btn btn-primary btn-lg shadow-sm">
+                <i class="fas fa-edit"></i> Düzenle
+            </a>
+            <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    table.table-bordered th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table.table-bordered td {
+        font-weight: 500;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

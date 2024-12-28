@@ -1,0 +1,119 @@
+﻿@model IEnumerable<ERP.Models.Veri.IsMerkez.BSMGRNNMWCMHEAD>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WCMDOCFROM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WCMDOCUNTIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAINWCMDOCTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAINWCMDOCNUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WORKTIME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISDELETED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISPASSIVE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WCMSTEXT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WCMLTWXT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OPRDOCTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCOMCODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOCTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCCMDOCNUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCCMDOCTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FLANCODE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WCMDOCFROM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WCMDOCUNTIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAINWCMDOCTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAINWCMDOCNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WORKTIME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISDELETED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISPASSIVE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WCMSTEXT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WCMLTWXT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OPRDOCTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCOMCODE.COMCODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOCTYPE.DOCTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCCMDOCNUM.CCMDOCNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCCMDOCTYPE.CCMDOCNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FLANCODE.LANCODE)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.WCMDOCNUM">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.WCMDOCNUM">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.WCMDOCNUM">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

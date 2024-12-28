@@ -1,0 +1,90 @@
+﻿@model ERP.Models.Veri.UrunAgac.BSMGRNNMBOMHEAD
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BSMGRNNMBOMHEAD</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BOMDOCFROM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BOMDOCFROM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BOMDOCUNTIL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BOMDOCUNTIL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QUANTITY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QUANTITY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CONTENTNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CONTENTNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COMPONENT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COMPONENT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISDELETED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISDELETED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISPASSIVE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISPASSIVE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DRAWNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DRAWNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FCOMCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FCOMCODE.COMCODE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOCTYPE.DOCTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FMATDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FMATDOCNUM.MATDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FMATDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FMATDOCTYPE.MATDOCNUM)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.BOMDOCNUM">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,129 @@
+﻿@model ERP.Models.Veri.Rota.BSMGRNNMROTHEAD
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BSMGRNNMROTHEAD</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COMCODE" class="control-label"></label>
+                <select asp-for="COMCODE" class="form-control" asp-items="ViewBag.COMCODE"></select>
+                <span asp-validation-for="COMCODE" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ROTDOCNUM" />
+            <div class="form-group">
+                <label asp-for="ROTDOCTYPE" class="control-label"></label>
+                <select asp-for="ROTDOCTYPE" class="form-control" asp-items="ViewBag.ROTDOCTYPE"></select>
+                <span asp-validation-for="ROTDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ROTDOCFROM" class="control-label"></label>
+                <input asp-for="ROTDOCFROM" class="form-control" />
+                <span asp-validation-for="ROTDOCFROM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ROTDOCUNTIL" class="control-label"></label>
+                <input asp-for="ROTDOCUNTIL" class="form-control" />
+                <span asp-validation-for="ROTDOCUNTIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DRAWNUM" class="control-label"></label>
+                <input asp-for="DRAWNUM" class="form-control" />
+                <span asp-validation-for="DRAWNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MATDOCTYPE" class="control-label"></label>
+                <select asp-for="MATDOCTYPE" class="form-control" asp-items="ViewBag.MATDOCTYPE"></select>
+                <span asp-validation-for="MATDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MATDOCNUM" class="control-label"></label>
+                <select asp-for="MATDOCNUM" class="form-control" asp-items="ViewBag.MATDOCNUM"></select>
+                <span asp-validation-for="MATDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OPRNUM" class="control-label"></label>
+                <input asp-for="OPRNUM" class="form-control" />
+                <span asp-validation-for="OPRNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WCMDOCTYPE" class="control-label"></label>
+                <select asp-for="WCMDOCTYPE" class="form-control" asp-items="ViewBag.WCMDOCTYPE"></select>
+                <span asp-validation-for="WCMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WCMDOCNUM" class="control-label"></label>
+                <select asp-for="WCMDOCNUM" class="form-control" asp-items="ViewBag.WCMDOCNUM"></select>
+                <span asp-validation-for="WCMDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SETUPTIME" class="control-label"></label>
+                <input asp-for="SETUPTIME" class="form-control" />
+                <span asp-validation-for="SETUPTIME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MACHINETIME" class="control-label"></label>
+                <input asp-for="MACHINETIME" class="form-control" />
+                <span asp-validation-for="MACHINETIME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LABOURTIME" class="control-label"></label>
+                <input asp-for="LABOURTIME" class="form-control" />
+                <span asp-validation-for="LABOURTIME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BOMDOCNUM" class="control-label"></label>
+                <select asp-for="BOMDOCNUM" class="form-control" asp-items="ViewBag.BOMDOCNUM"></select>
+                <span asp-validation-for="BOMDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BOMDOCTYPE" class="control-label"></label>
+                <select asp-for="BOMDOCTYPE" class="form-control" asp-items="ViewBag.BOMDOCTYPE"></select>
+                <span asp-validation-for="BOMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTENTNUM" class="control-label"></label>
+                <input asp-for="CONTENTNUM" class="form-control" />
+                <span asp-validation-for="CONTENTNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COMPONENT" class="control-label"></label>
+                <input asp-for="COMPONENT" class="form-control" />
+                <span asp-validation-for="COMPONENT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QUANTITY" class="control-label"></label>
+                <input asp-for="QUANTITY" class="form-control" />
+                <span asp-validation-for="QUANTITY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISDELETED" class="control-label"></label>
+                <input asp-for="ISDELETED" class="form-control" />
+                <span asp-validation-for="ISDELETED" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISPASSIVE" class="control-label"></label>
+                <input asp-for="ISPASSIVE" class="form-control" />
+                <span asp-validation-for="ISPASSIVE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

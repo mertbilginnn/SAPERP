@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ERP.Models.Veri.UrunAgac.BSMGRNNMBOMHEAD>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BOMDOCFROM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BOMDOCUNTIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QUANTITY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CONTENTNUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COMPONENT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISDELETED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISPASSIVE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DRAWNUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCOMCODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOCTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FMATDOCNUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FMATDOCTYPE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BOMDOCFROM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BOMDOCUNTIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QUANTITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CONTENTNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COMPONENT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISDELETED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISPASSIVE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DRAWNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCOMCODE.COMCODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOCTYPE.DOCTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FMATDOCNUM.MATDOCNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FMATDOCTYPE.MATDOCNUM)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BOMDOCNUM">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BOMDOCNUM">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BOMDOCNUM">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

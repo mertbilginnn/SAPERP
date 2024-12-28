@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ERP.Models.Veri.Maliyet.BSMGRNNMCCMHEAD>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CCMDOCFROM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCMDOCUNTIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAINCCMDOCNUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAINCCMDOCTYPE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISDELETED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISPASSIVE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCMSTEXT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCMLTEXT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCOMCODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FLANCODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOCTYPE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCMDOCFROM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCMDOCUNTIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAINCCMDOCNUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAINCCMDOCTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISDELETED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISPASSIVE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCMSTEXT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCMLTEXT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCOMCODE.COMCODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FLANCODE.LANCODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOCTYPE.DOCTYPE)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CCMDOCNUM">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CCMDOCNUM">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CCMDOCNUM">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

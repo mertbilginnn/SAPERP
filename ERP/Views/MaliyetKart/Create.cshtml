@@ -1,0 +1,85 @@
+﻿@model ERP.Models.Veri.Maliyet.BSMGRNNMCCMHEAD
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>BSMGRNNMCCMHEAD</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COMCODE" class="control-label"></label>
+                <select asp-for="COMCODE" class ="form-control" asp-items="ViewBag.COMCODE"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMDOCNUM" class="control-label"></label>
+                <input asp-for="CCMDOCNUM" class="form-control" />
+                <span asp-validation-for="CCMDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMDOCTYPE" class="control-label"></label>
+                <select asp-for="CCMDOCTYPE" class ="form-control" asp-items="ViewBag.CCMDOCTYPE"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMDOCFROM" class="control-label"></label>
+                <input asp-for="CCMDOCFROM" class="form-control" />
+                <span asp-validation-for="CCMDOCFROM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMDOCUNTIL" class="control-label"></label>
+                <input asp-for="CCMDOCUNTIL" class="form-control" />
+                <span asp-validation-for="CCMDOCUNTIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MAINCCMDOCNUM" class="control-label"></label>
+                <input asp-for="MAINCCMDOCNUM" class="form-control" />
+                <span asp-validation-for="MAINCCMDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MAINCCMDOCTYPE" class="control-label"></label>
+                <input asp-for="MAINCCMDOCTYPE" class="form-control" />
+                <span asp-validation-for="MAINCCMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISDELETED" class="control-label"></label>
+                <input asp-for="ISDELETED" class="form-control" />
+                <span asp-validation-for="ISDELETED" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISPASSIVE" class="control-label"></label>
+                <input asp-for="ISPASSIVE" class="form-control" />
+                <span asp-validation-for="ISPASSIVE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LANCODE" class="control-label"></label>
+                <select asp-for="LANCODE" class ="form-control" asp-items="ViewBag.LANCODE"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMSTEXT" class="control-label"></label>
+                <input asp-for="CCMSTEXT" class="form-control" />
+                <span asp-validation-for="CCMSTEXT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCMLTEXT" class="control-label"></label>
+                <input asp-for="CCMLTEXT" class="form-control" />
+                <span asp-validation-for="CCMLTEXT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

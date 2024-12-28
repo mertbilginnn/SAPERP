@@ -1,0 +1,89 @@
+﻿@model ERP.Models.Veri.UrunAgac.BSMGRNNMBOMHEAD
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BSMGRNNMBOMHEAD</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COMCODE" class="control-label"></label>
+                <select asp-for="COMCODE" class="form-control" asp-items="ViewBag.COMCODE"></select>
+                <span asp-validation-for="COMCODE" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="BOMDOCNUM" />
+            <div class="form-group">
+                <label asp-for="BOMDOCTYPE" class="control-label"></label>
+                <select asp-for="BOMDOCTYPE" class="form-control" asp-items="ViewBag.BOMDOCTYPE"></select>
+                <span asp-validation-for="BOMDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BOMDOCFROM" class="control-label"></label>
+                <input asp-for="BOMDOCFROM" class="form-control" />
+                <span asp-validation-for="BOMDOCFROM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BOMDOCUNTIL" class="control-label"></label>
+                <input asp-for="BOMDOCUNTIL" class="form-control" />
+                <span asp-validation-for="BOMDOCUNTIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MATDOCNUM" class="control-label"></label>
+                <select asp-for="MATDOCNUM" class="form-control" asp-items="ViewBag.MATDOCNUM"></select>
+                <span asp-validation-for="MATDOCNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MATDOCTYPE" class="control-label"></label>
+                <select asp-for="MATDOCTYPE" class="form-control" asp-items="ViewBag.MATDOCTYPE"></select>
+                <span asp-validation-for="MATDOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QUANTITY" class="control-label"></label>
+                <input asp-for="QUANTITY" class="form-control" />
+                <span asp-validation-for="QUANTITY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTENTNUM" class="control-label"></label>
+                <input asp-for="CONTENTNUM" class="form-control" />
+                <span asp-validation-for="CONTENTNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COMPONENT" class="control-label"></label>
+                <input asp-for="COMPONENT" class="form-control" />
+                <span asp-validation-for="COMPONENT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISDELETED" class="control-label"></label>
+                <input asp-for="ISDELETED" class="form-control" />
+                <span asp-validation-for="ISDELETED" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISPASSIVE" class="control-label"></label>
+                <input asp-for="ISPASSIVE" class="form-control" />
+                <span asp-validation-for="ISPASSIVE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DRAWNUM" class="control-label"></label>
+                <input asp-for="DRAWNUM" class="form-control" />
+                <span asp-validation-for="DRAWNUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

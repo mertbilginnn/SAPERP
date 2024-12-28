@@ -1,0 +1,144 @@
+﻿@model ERP.Models.Veri.Malzeme.BSMGRNNMMATHEAD
+
+@{
+    ViewData["Title"] = "Malzeme Kartı Düzenle";
+}
+
+<h1 class="text-primary text-center mb-4">Malzeme Kartı Düzenle</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-8 shadow-lg p-4 rounded bg-light">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <!-- Firma Kodu -->
+            <div class="form-group mb-3">
+                <label asp-for="COMCODE" class="form-label">Firma Kodu</label>
+                <select asp-for="COMCODE" class="form-select" asp-items="ViewBag.COMCODE"></select>
+                <span asp-validation-for="COMCODE" class="text-danger"></span>
+            </div>
+
+            <input type="hidden" asp-for="MATDOCNUM" />
+
+            <!-- Malzeme Tipi -->
+            <div class="form-group mb-3">
+                <label asp-for="MATDOCTYPE" class="form-label">Malzeme Tipi</label>
+                <select asp-for="MATDOCTYPE" class="form-select" asp-items="ViewBag.MATDOCTYPE"></select>
+                <span asp-validation-for="MATDOCTYPE" class="text-danger"></span>
+            </div>
+
+            <!-- Geçerlilik Başlangıç -->
+            <div class="form-group mb-3">
+                <label asp-for="MATDOCFROM" class="form-label">Geçerlilik Başlangıç</label>
+                <input asp-for="MATDOCFROM" class="form-control" />
+                <span asp-validation-for="MATDOCFROM" class="text-danger"></span>
+            </div>
+
+            <!-- Geçerlilik Bitiş -->
+            <div class="form-group mb-3">
+                <label asp-for="MATDOCUNTIL" class="form-label">Geçerlilik Bitiş</label>
+                <input asp-for="MATDOCUNTIL" class="form-control" />
+                <span asp-validation-for="MATDOCUNTIL" class="text-danger"></span>
+            </div>
+
+            <!-- Tedarik Tipi -->
+            <div class="form-group mb-3">
+                <label asp-for="SUPPLYTYPE" class="form-label">Tedarik Tipi</label>
+                <input asp-for="SUPPLYTYPE" class="form-control" />
+                <span asp-validation-for="SUPPLYTYPE" class="text-danger"></span>
+            </div>
+
+            <!-- Malzeme Stok Birimi -->
+            <div class="form-group mb-3">
+                <label asp-for="STUNIT" class="form-label">Malzeme Stok Birimi</label>
+                <select asp-for="STUNIT" class="form-select" asp-items="ViewBag.STUNIT"></select>
+                <span asp-validation-for="STUNIT" class="text-danger"></span>
+            </div>
+
+            <!-- Net Ağırlığı -->
+            <div class="form-group mb-3">
+                <label asp-for="NETWEIGHT" class="form-label">Net Ağırlığı</label>
+                <input asp-for="NETWEIGHT" class="form-control" />
+                <span asp-validation-for="NETWEIGHT" class="text-danger"></span>
+            </div>
+
+            <!-- Net Ağırlık Birimi -->
+            <div class="form-group mb-3">
+                <label asp-for="NWUNIT" class="form-label">Net Ağırlık Birimi</label>
+                <select asp-for="NWUNIT" class="form-select" asp-items="ViewBag.NWUNIT"></select>
+                <span asp-validation-for="NWUNIT" class="text-danger"></span>
+            </div>
+
+            <!-- Brüt Ağırlık -->
+            <div class="form-group mb-3">
+                <label asp-for="BRUTWEIGHT" class="form-label">Brüt Ağırlık</label>
+                <input asp-for="BRUTWEIGHT" class="form-control" />
+                <span asp-validation-for="BRUTWEIGHT" class="text-danger"></span>
+            </div>
+
+            <!-- Brüt Ağırlık Birimi -->
+            <div class="form-group mb-3">
+                <label asp-for="BWUNIT" class="form-label">Brüt Ağırlık Birimi</label>
+                <select asp-for="BWUNIT" class="form-select" asp-items="ViewBag.BWUNIT"></select>
+                <span asp-validation-for="BWUNIT" class="text-danger"></span>
+            </div>
+
+            <!-- Ürün Ağacı Var mı? -->
+            <div class="form-group mb-3">
+                <label asp-for="ISBOM" class="form-label">Ürün Ağacı Var mı?</label>
+                <input asp-for="ISBOM" class="form-control" />
+                <span asp-validation-for="ISBOM" class="text-danger"></span>
+            </div>
+
+            <!-- Ürün Ağacı Tipi -->
+            <div class="form-group mb-3">
+                <label asp-for="BOMDOCTYPE" class="form-label">Ürün Ağacı Tipi</label>
+                <select asp-for="BOMDOCTYPE" class="form-select" asp-items="ViewBag.BOMDOCTYPE"></select>
+                <span asp-validation-for="BOMDOCTYPE" class="text-danger"></span>
+            </div>
+
+            <!-- Rota Tipi -->
+            <div class="form-group mb-3">
+                <label asp-for="ROTDOCTYPE" class="form-label">Rota Tipi</label>
+                <select asp-for="ROTDOCTYPE" class="form-select" asp-items="ViewBag.ROTDOCTYPE"></select>
+                <span asp-validation-for="ROTDOCTYPE" class="text-danger"></span>
+            </div>
+
+            <!-- Rota Numarası -->
+            <div class="form-group mb-3">
+                <label asp-for="ROTDOCNUM" class="form-label">Rota Numarası</label>
+                <input asp-for="ROTDOCNUM" class="form-control" />
+                <span asp-validation-for="ROTDOCNUM" class="text-danger"></span>
+            </div>
+
+            <!-- Kaydet ve Listeye Dön Butonları -->
+            <div class="form-group mb-3 text-center">
+                <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                    <i class="fas fa-save"></i> Kaydet
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                    <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    input:focus, select:focus {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

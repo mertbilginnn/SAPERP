@@ -1,0 +1,57 @@
+﻿@model ERP.Models.Kontrol.Genel.BSMGRNNMGEN004
+
+@{
+    ViewData["Title"] = "Şehir Detayı";
+}
+
+<h1 class="text-primary text-center mb-4">Şehir Detayı</h1>
+
+<div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Şehir Bilgileri</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th class="bg-light">Şehir Kodu</th>
+                <td>@Html.DisplayFor(model => model.CITYCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Şehir İsmi</th>
+                <td>@Html.DisplayFor(model => model.CITYTEXT)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Ülke Kodu</th>
+                <td>@Html.DisplayFor(model => model.COUNTRY.COUNTRYCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Ülke İsmi</th>
+                <td>@Html.DisplayFor(model => model.COUNTRY.COUNTRYNAME)</td>
+            </tr>
+        </table>
+        <div class="mt-4 text-center">
+            <a asp-action="Edit" asp-route-id="@Model?.CITYCODE" class="btn btn-primary btn-lg shadow-sm">
+                <i class="fas fa-edit"></i> Düzenle
+            </a>
+            <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    table.table-bordered th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table.table-bordered td {
+        font-weight: 500;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

@@ -1,0 +1,44 @@
+﻿@model ERP.Models.Kontrol.RotaBilgi.BSMGRNNMWCM001
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BSMGRNNMWCM001</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DOCTYPE" />
+            <div class="form-group">
+                <label asp-for="DOCTYPETEXT" class="control-label"></label>
+                <input asp-for="DOCTYPETEXT" class="form-control" />
+                <span asp-validation-for="DOCTYPETEXT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ISPASSIVE" class="control-label"></label>
+                <input asp-for="ISPASSIVE" class="form-control" />
+                <span asp-validation-for="ISPASSIVE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COMCODE" class="control-label"></label>
+                <select asp-for="COMCODE" class="form-control" asp-items="ViewBag.COMCODE"></select>
+                <span asp-validation-for="COMCODE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

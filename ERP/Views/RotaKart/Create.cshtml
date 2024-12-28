@@ -1,0 +1,125 @@
+﻿@model ERP.Models.Veri.Rota.BSMGRNNMROTHEAD
+
+@{
+    ViewData["Title"] = "Yeni Rota Oluştur";
+}
+
+<h1 class="text-primary text-center mb-4">Yeni Rota Oluştur</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-8 shadow-lg p-4 rounded bg-light">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="COMCODE" class="form-label">Firma Kodu</label>
+                    <select asp-for="COMCODE" class="form-select" asp-items="ViewBag.COMCODE"></select>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="ROTDOCNUM" class="form-label">Rota Numarası</label>
+                    <input asp-for="ROTDOCNUM" class="form-control" />
+                    <span asp-validation-for="ROTDOCNUM" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="ROTDOCTYPE" class="form-label">Rota Tipi</label>
+                    <select asp-for="ROTDOCTYPE" class="form-select" asp-items="ViewBag.ROTDOCTYPE"></select>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="ROTDOCFROM" class="form-label">Başlangıç Tarihi</label>
+                    <input asp-for="ROTDOCFROM" class="form-control" />
+                    <span asp-validation-for="ROTDOCFROM" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="ROTDOCUNTIL" class="form-label">Bitiş Tarihi</label>
+                    <input asp-for="ROTDOCUNTIL" class="form-control" />
+                    <span asp-validation-for="ROTDOCUNTIL" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="DRAWNUM" class="form-label">Çizim Numarası</label>
+                    <input asp-for="DRAWNUM" class="form-control" />
+                    <span asp-validation-for="DRAWNUM" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="CONTENTNUM" class="form-label">İçerik Numarası</label>
+                    <input asp-for="CONTENTNUM" class="form-control" />
+                    <span asp-validation-for="CONTENTNUM" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="MATDOCNUM" class="form-label">Malzame Numarası</label>
+                    <input asp-for="MATDOCNUM" class="form-control" />
+                    <span asp-validation-for="MATDOCNUM" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                    <label asp-for="OPRNUM" class="form-label">Operasyon Numarası</label>
+                    <input asp-for="OPRNUM" class="form-control" />
+                    <span asp-validation-for="OPRNUM" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="SETUPTIME" class="form-label">Kurulum Süresi</label>
+                    <input asp-for="SETUPTIME" class="form-control" />
+                    <span asp-validation-for="SETUPTIME" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                    <label asp-for="MACHINETIME" class="form-label">Makine Süresi</label>
+                    <input asp-for="MACHINETIME" class="form-control" />
+                    <span asp-validation-for="MACHINETIME" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="LABOURTIME" class="form-label">İşçilik Süresi</label>
+                    <input asp-for="LABOURTIME" class="form-control" />
+                    <span asp-validation-for="LABOURTIME" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                    <label asp-for="COMPONENT" class="form-label">Bileşen Kodu</label>
+                    <input asp-for="COMPONENT" class="form-control" />
+                    <span asp-validation-for="COMPONENT" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="QUANTITY" class="form-label">Miktar</label>
+                    <input asp-for="QUANTITY" class="form-control" />
+                    <span asp-validation-for="QUANTITY" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                    <i class="fas fa-save"></i> Kaydet
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                    <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    input:focus, select:focus {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

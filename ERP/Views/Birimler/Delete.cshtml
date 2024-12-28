@@ -1,0 +1,65 @@
+﻿@model ERP.Models.Kontrol.Genel.BSMGRNNMGEN005
+
+@{
+    ViewData["Title"] = "Birimi Sil";
+}
+
+<h1 class="text-danger text-center mb-4">Birimi Sil</h1>
+
+<p class="text-center">Bu birimi silmek istediğinizden emin misiniz?</p>
+
+<div class="card shadow-lg">
+    <div class="card-header bg-danger text-white">
+        <h4 class="mb-0">Birim Bilgileri</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th class="bg-light">Birim Kodu</th>
+                <td>@Html.DisplayFor(model => model.UNITCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Birim Adı</th>
+                <td>@Html.DisplayFor(model => model.UNITTEXT)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Ana Ağırlık Birimi</th>
+                <td>@Html.DisplayFor(model => model.ISMAINUNIT)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Ana Birim Kodu</th>
+                <td>@Html.DisplayFor(model => model.MAINUNITCODE)</td>
+            </tr>
+            <tr>
+                <th class="bg-light">Firma Kodu</th>
+                <td>@Html.DisplayFor(model => model.FCOMCODE.COMCODE)</td>
+            </tr>
+        </table>
+        <div class="mt-4 text-center">
+            <form method="post" asp-action="DeleteConfirmed" asp-route-id="@Model.UNITCODE">
+                <button type="submit" class="btn btn-danger btn-lg shadow-sm">
+                    <i class="fas fa-trash-alt"></i> Sil
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm ms-3">
+                    <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    table.table-bordered th {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table.table-bordered td {
+        font-weight: 500;
+    }
+
+    button:hover, a:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

@@ -1,0 +1,61 @@
+﻿@model ERP.Models.Kontrol.UrunAgac.BSMGRNNMBOM001
+
+@{
+    ViewData["Title"] = "Yeni Ürün Ağacı Oluştur";
+}
+
+<h1 class="text-primary text-center mb-4">Yeni Ürün Ağacı Oluştur</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6 shadow-lg p-4 rounded bg-light">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="DOCTYPE" class="form-label">Ürün Ağacı Tipi</label>
+                <input asp-for="DOCTYPE" class="form-control" placeholder="Ürün Ağacı Tipini Girin" />
+                <span asp-validation-for="DOCTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="DOCTYPETEXT" class="form-label">Ürün Ağacı Açıklama</label>
+                <input asp-for="DOCTYPETEXT" class="form-control" placeholder="Ürün Ağacı Açıklamayı Girin" />
+                <span asp-validation-for="DOCTYPETEXT" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="ISPASSIVE" class="form-label">Pasif mi?</label>
+                <input asp-for="ISPASSIVE" class="form-control" placeholder="Pasif Durumu Girin" />
+                <span asp-validation-for="ISPASSIVE" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="COMCODE" class="form-label">Firma Kodu</label>
+                <select asp-for="COMCODE" class="form-select" asp-items="ViewBag.COMCODE"></select>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                    <i class="fas fa-save"></i> Kaydet
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                    <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    input:focus, select:focus {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

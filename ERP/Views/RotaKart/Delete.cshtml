@@ -1,0 +1,141 @@
+﻿@model ERP.Models.Veri.Rota.BSMGRNNMROTHEAD
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BSMGRNNMROTHEAD</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ROTDOCFROM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ROTDOCFROM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ROTDOCUNTIL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ROTDOCUNTIL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DRAWNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DRAWNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OPRNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OPRNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SETUPTIME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SETUPTIME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MACHINETIME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MACHINETIME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LABOURTIME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LABOURTIME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CONTENTNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CONTENTNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COMPONENT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COMPONENT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QUANTITY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QUANTITY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISDELETED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISDELETED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISPASSIVE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISPASSIVE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FCOMCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FCOMCODE.COMCODE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FROTDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FROTDOCTYPE.DOCTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FMATDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FMATDOCNUM.MATDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FMATDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FMATDOCTYPE.MATDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FWCMDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FWCMDOCTYPE.WCMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FWCMDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FWCMDOCNUM.WCMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FBOMDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FBOMDOCNUM.BOMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FBOMDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FBOMDOCTYPE.BOMDOCNUM)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ROTDOCNUM" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

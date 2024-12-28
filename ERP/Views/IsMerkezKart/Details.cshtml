@@ -1,0 +1,108 @@
+﻿@model ERP.Models.Veri.IsMerkez.BSMGRNNMWCMHEAD
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BSMGRNNMWCMHEAD</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WCMDOCFROM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WCMDOCFROM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WCMDOCUNTIL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WCMDOCUNTIL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MAINWCMDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MAINWCMDOCTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MAINWCMDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MAINWCMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WORKTIME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WORKTIME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISDELETED)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISDELETED)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISPASSIVE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISPASSIVE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WCMSTEXT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WCMSTEXT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WCMLTWXT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WCMLTWXT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OPRDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OPRDOCTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FCOMCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FCOMCODE.COMCODE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOCTYPE.DOCTYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FCCMDOCNUM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FCCMDOCNUM.CCMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FCCMDOCTYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FCCMDOCTYPE.CCMDOCNUM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FLANCODE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FLANCODE.LANCODE)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.WCMDOCNUM">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

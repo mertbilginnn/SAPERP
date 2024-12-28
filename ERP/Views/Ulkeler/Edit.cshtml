@@ -1,0 +1,53 @@
+﻿@model ERP.Models.Kontrol.Genel.BSMGRNNMGEN003
+
+@{
+    ViewData["Title"] = "Ülkeyi Düzenle";
+}
+
+<h1 class="text-primary text-center mb-4">Ülkeyi Düzenle</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6 shadow-lg p-4 rounded bg-light">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <input type="hidden" asp-for="COUNTRYCODE" />
+            <div class="form-group mb-3">
+                <label asp-for="COUNTRYCODE" class="form-label">Ülke Kodu</label>
+                <input asp-for="COUNTRYCODE" class="form-control" readonly />
+                <span asp-validation-for="COUNTRYCODE" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="COUNTRYNAME" class="form-label">Ülke İsmi</label>
+                <input asp-for="COUNTRYNAME" class="form-control" placeholder="Ülke İsmini Girin" />
+                <span asp-validation-for="COUNTRYNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                    <i class="fas fa-save"></i> Kaydet
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg shadow-sm">
+                    <i class="fas fa-arrow-left"></i> Listeye Geri Dön
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    input:focus, select:focus {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
